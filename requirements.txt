@@ -1,3 +1,0 @@
-streamlit
-openai-whisper
-google-api-python-client
