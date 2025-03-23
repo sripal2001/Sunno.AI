@@ -1,4 +1,4 @@
-streamlit
+ffmpeg-python
 openai-whisper
 google-api-python-client
-pytube
+streamlit
