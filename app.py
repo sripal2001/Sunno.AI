@@ -10,7 +10,7 @@ SEARCH_ENGINE_ID = "504a51815585741bf"  # Replace with your Custom Search Engine
 YOUTUBE_API_KEY = "AIzaSyCE5Pbq3MqcFXeI4h23LTK7hSmeuYLr6o8"  # Replace with your YouTube API key
 
 # 🎙 Load Whisper Model
-model = whisper.load_model("medium")
+model = whisper.load_model("small")
 
 # 🌟 Streamlit Page Config
 st.set_page_config(page_title="AI Audio Search", layout="wide")
