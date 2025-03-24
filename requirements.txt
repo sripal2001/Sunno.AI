@@ -1,3 +1,4 @@
-ffmpeg-python
-whisper
 streamlit
+openai-whisper
+ffmpeg-python
+google-api-python-client
