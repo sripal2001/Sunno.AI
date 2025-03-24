@@ -2,5 +2,4 @@ streamlit
 openai-whisper
 ffmpeg-python
 google-api-python-client
-torch==2.0.1 -f https://download.pytorch.org/whl/cpu/torch_stable.html
-
+torch==2.0.1 
