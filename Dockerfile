@@ -1,19 +1,20 @@
+# Use a lightweight Python image
 FROM python:3.9-slim
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y ffmpeg
-
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy project files into container
-COPY . /app
+# Copy the requirements file into the container
+COPY requirements.txt requirements.txt
 
 # Install Python dependencies
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose Streamlit port
+# Copy all app files into the container
+COPY . .
+
+# Expose Streamlit's default port
 EXPOSE 8501
 
-# Run Streamlit app
+# Run the Streamlit app when the container starts
 CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
