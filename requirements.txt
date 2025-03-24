@@ -2,5 +2,6 @@ streamlit
 openai-whisper
 ffmpeg-python
 google-api-python-client
-torch==2.0.1+cpu  # Use CPU version of PyTorch to avoid GPU-related issues
+torch @ https://download.pytorch.org/whl/cpu/torch-2.0.1%2Bcpu-cp39-cp39-linux_x86_64.whl
+
 
