@@ -11,7 +11,19 @@ SEARCH_ENGINE_ID = "504a51815585741bf"  # Replace with your Custom Search Engine
 YOUTUBE_API_KEY = "AIzaSyCE5Pbq3MqcFXeI4h23LTK7hSmeuYLr6o8"  # Replace with your YouTube API key
 
 # 🎙 Load Whisper Model
-model = whisper.load_model("small")
+import streamlit as st
+import whisper
+
+@st.cache_resource  # Load model once and reuse it
+def load_whisper_model():
+    return whisper.load_model("base")  # Use "base" or "tiny" to reduce memory
+
+model = load_whisper_model()
+
+@st.cache_data(ttl=3600)  # Cache results for 1 hour
+def transcribe_audio(audio_path):
+    return model.transcribe(audio_path)
+
 
 # 🌟 Streamlit Page Config
 st.set_page_config(page_title="AI Audio Search", layout="wide")
