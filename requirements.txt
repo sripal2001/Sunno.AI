@@ -2,6 +2,7 @@ streamlit==1.32.0
 openai-whisper==20231117
 ffmpeg-python==0.2.0
 google-api-python-client==2.125.0
-torch==2.0.1
+torch==2.6.0
+
 tiktoken==0.6.0
 numpy==1.26.0
