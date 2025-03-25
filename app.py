@@ -56,11 +56,17 @@ st.markdown("""
 
 # 🎯 Title & Description
 
-st.set_page_config(page_title="Sunno - AI Audio Search", page_icon="🔍")
+
+
+st.set_page_config(page_title="Sunno", layout="wide")  # ✅ This should be the first command
+
+st.markdown("### Welcome to Sunno")  # ✅ Now it's fine
+
 
 st.title("🎧 Sunno - AI-Powered Audio Search")
 st.write("Upload an audio file to transcribe and search inside it.")
-st.markdown("Google &amp; YouTube</div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center;'>Search Google & YouTube</div>", unsafe_allow_html=True)
+
 
 
 # 📂 Sidebar
