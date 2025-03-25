@@ -55,15 +55,21 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # 🎯 Title & Description
-st.markdown("<div class='title'>🔍 AI Audio Search</div>", unsafe_allow_html=True)
-st.markdown("<div class='subtitle'>Upload an audio file to transcribe and search its content on Google & YouTube</div>", unsafe_allow_html=True)
+
+st.set_page_config(page_title="Sunno - AI Audio Search", page_icon="🔍")
+
+st.title("🎧 Sunno - AI-Powered Audio Search")
+st.write("Upload an audio file to transcribe and search inside it.")
+Google & YouTube</div>", unsafe_allow_html=True)
 
 # 📂 Sidebar
-st.sidebar.title("🎛 Options")
-st.sidebar.write("Customize your experience.")
+st.sidebar.title("🔍 Sunno - AI Audio Search")
+st.sidebar.write("Find words inside audio instantly.")
+
 
 # 📥 Upload Audio File
-audio_file = st.file_uploader("🎵 Upload an audio file", type=["mp3", "wav", "m4a"])
+uploaded_file = st.file_uploader("Upload your audio file for Sunno to process", type=["mp3", "wav", "mp4"])
+
 
 if audio_file:
     st.sidebar.success("✅ Audio file uploaded!")
