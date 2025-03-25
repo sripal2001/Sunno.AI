@@ -60,7 +60,8 @@ st.set_page_config(page_title="Sunno - AI Audio Search", page_icon="🔍")
 
 st.title("🎧 Sunno - AI-Powered Audio Search")
 st.write("Upload an audio file to transcribe and search inside it.")
-Google & YouTube</div>", unsafe_allow_html=True)
+st.markdown("Google &amp; YouTube</div>", unsafe_allow_html=True)
+
 
 # 📂 Sidebar
 st.sidebar.title("🔍 Sunno - AI Audio Search")
